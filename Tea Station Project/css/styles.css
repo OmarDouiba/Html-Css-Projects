@@ -101,7 +101,7 @@ h4
 /* Global Style */
 .btn
 {
-    text-transform: capitalize;
+    text-transform: uppercase;
     background-color: var(--clr-primary);
     color: var(--clr-white);
     padding: 0.375rem 0.75rem;
@@ -113,7 +113,6 @@ h4
     cursor: pointer;
     border: none;
     box-shadow: 0 1rem 3rem rgba(0,0,0,0.3);
-    border-radius: var(--radius);
 }
 .btn:hover
 {
@@ -150,6 +149,10 @@ h4
         padding: 4rem 1rem;;
     }
 }
+p
+{
+    margin-bottom: 1.25rem;
+}
 /*
 ============
 Header
@@ -162,7 +165,7 @@ Header
         rgba(0,0,0,0.6), 
         rgba(0,0,0,0.6), 
         rgba(0,0,0,0.6))
-        , url("../images/main-bcg.jpeg") center/cover no-repeat fixed;
+        , url("../images/main-bcg.jpeg") center/cover no-repeat scroll;
     position: relative;
     /*animation*/
     overflow-x: hidden;
@@ -290,10 +293,6 @@ About section
     max-width: 26rem;
     color: var(--clr-grey-5);
 }
-p
-{
-    margin-bottom: 1.25rem;
-}
 @media screen and (min-width: 992px)
 {
     .about-img, .about-info
@@ -304,5 +303,72 @@ p
     .about-info
     {
         padding-left: 1rem;
+    }
+}
+/*
+============
+Products
+============
+*/
+.products
+{
+    background: var(--clr-grey-10);
+}
+.products article
+{
+    padding: 2rem 0;
+}
+.products-text
+{
+    background: var(--clr-grey-10);
+    max-width: 26rem;
+}
+.product
+{
+    margin-bottom: 2rem;
+}
+.product-img
+{
+    border-radius: var(--radius);
+    margin-bottom: 2rem;
+    height: 17rem;
+    object-fit: cover;
+}
+.product-price
+{
+    color: var(--clr-primary);
+}
+@media screen and (min-width: 786px)
+{
+    .product
+    {
+        float: left;
+        width: 50%;
+        padding-right: 2rem;
+    }
+}
+@media screen and (min-width: 992px)
+{
+    .product
+    {
+        width: 33.33%;
+    }
+}
+@media screen and (min-width: 1020px)
+{
+    .product-info
+    {
+        float: left;
+        width: 30%;
+    }
+    .products-invetory
+    {
+        float: left;
+        width: 70%;
+    }
+    .product
+    {
+        margin-bottom: 0;
+        padding: 0 1rem;
     }
 }
